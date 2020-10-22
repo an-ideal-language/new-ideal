@@ -4,16 +4,14 @@
 
 extern BOXPTR boxlist;
 
-yyerror (message)
-char *message;
-{
-	fprintf (stderr, "ideal: ");
-	fprintf (stderr, "%s ", message);
-	fprintf (stderr, "near line %d in file %s\n",
-		lineno,
-		filename
-	);
-}
+extern int yylex(void);
+ 
+static void
+yyerror (const char * message) {
+  fprintf (stderr, "ideal: ");
+  fprintf (stderr, "%s ", message);
+  fprintf (stderr, "near line %d in file %s\n", lineno, filename);
+  }
 %}
 %token	BOX VAR BDLIST PUT CONN TO USING
 %token	CONSTRUCT DRAW OPAQUE LEFT CENTER RIGHT AT
@@ -83,7 +81,7 @@ stmt	:varstmt ';'	{$$ = (int) stmtgen (VAR, (char *) $1);}
 	|error ';'	{fprintf (stderr, "ideal: syntax error near line %d in file %s\n",
 				lineno, filename);
 			yyerrok;
-			$$ = NULL;
+			$$ = (int) NULL;
 	}
 	;
 
