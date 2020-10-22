@@ -37,6 +37,8 @@ ideal.h:	stdas.h
 
 lex.yy.c:	idlex.l
 	lex idlex.l
+lex.yy.o:	lex.yy.c
+	cc -c -DYY_NO_INPUT lex.yy.c
 
 y.tab.c:	idyac.y
 	yacc -d idyac.y
