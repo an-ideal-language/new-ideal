@@ -1,9 +1,9 @@
-I# new-ideal
+# new-ideal
 
 A second implementation of the ideal constraint-based picture description
 language.
 
-IThe original code was copied from
+The original code was copied from
 [freaknet.org/martin/tape/stuff/ditroff/newideal](http://freaknet.org/martin/tape/stuff/ditroff/newideal/) .
 
 The files downloaded are:
