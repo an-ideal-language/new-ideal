@@ -191,7 +191,7 @@ EXPR exprn;
 			}
 			break;
 		case CONST:
-			fprintf (stderr, "%f", extl->info.const);
+			fprintf (stderr, "%f", extl->info.constant);
 			break;
 		}
 	} else {
