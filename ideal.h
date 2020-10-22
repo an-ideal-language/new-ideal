@@ -11,7 +11,6 @@ typedef int	boolean;
 
 #define EPSILON 0.0001
 #define	PI	3.1415926535
-#define	INFINITY	1e30
 #define INTERSIZE	20
 #define	POSSINTER	2
 
@@ -133,7 +132,7 @@ typedef struct exprextl {	/* external node of expr tree */
 	boolean leaf;	/* always TRUE */
 	union u {
 		struct namenode *path;
-		float const;
+		float constant;
 	} info;
 	int kind;	/* should be one of PATH, CONST */
 	} EXPREXTL, *EXTLPTR;
