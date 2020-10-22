@@ -21,14 +21,16 @@ struct filenode *filestack = NULL;
 FILE *curfile;
 #undef	input
 #undef	unput
+static int input(void);
 
 boolean file_start = TRUE;
 boolean just_popped = FALSE;
 
 void filepush ();
 void filepop ();
-char input ();
 void unput ();
+extern void idinclude(const char *, int);
+extern void interpret(void);
 %}
 %Start	PROGRAM COMMENT OUTSIDE LIBRARY INCLUDE
 %%
@@ -282,7 +284,8 @@ struct filenode *f;
 	return (c);
 }
 
-char input ()
+static int
+input (void)
 {
 	int c;
 	c = 0;
