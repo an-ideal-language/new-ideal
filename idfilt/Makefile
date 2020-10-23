@@ -11,7 +11,7 @@ LIBDIR = ${BINDIR}/lib/ideal/lib
 # pfilt is ideal filter for plot(1)
 # tfilt is filter for ditroff
 # idsort is general sort for ideal
-OBJECTS = tfilt pfilt idsort vfilt 4filt
+OBJECTS = tfilt pfilt idsort vfilt 
 
 all:	${OBJECTS}
 
