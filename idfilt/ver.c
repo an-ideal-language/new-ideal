@@ -3,6 +3,7 @@ static char *sccsid = "ver.c	(CWI)	1.1	85/03/01";
 #endif
 
 #include "idfilt.h"
+#include <string.h>
 
 #define	RESOLUTION	200.0
 
