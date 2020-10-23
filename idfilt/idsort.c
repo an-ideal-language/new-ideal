@@ -1,7 +1,9 @@
 #ifndef lint
 static char *sccsid = "idsort.c	(CWI)	1.1	85/03/01";
 #endif
+#include <stdlib.h>
 #include "idfilt.h"
+#include <string.h>
 
 FILE *infile;
 FILE *tempfile;
@@ -21,9 +23,10 @@ boolean boundset;
 
 boolean veryfirst = TRUE;
 
-main (argc, argv)
-int argc;
-char *argv[];
+static void interpret(FILE *);
+
+int
+main (int argc, char * argv[])
 {
 	while (argc > 1 && argv[1][0] == '-') {
 		fprintf (stderr, "ideal filter: unknown flag %c\n", argv[1][1]);
@@ -49,8 +52,8 @@ char *argv[];
 	exit (0);
 }
 
-interpret (infile)
-register FILE *infile;
+static void
+interpret (FILE * infile)
 {
 	char buf[250];
 
