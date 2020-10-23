@@ -2,6 +2,8 @@
 static char *sccsid = "pout.c	(CWI)	1.1	85/03/01";
 #endif
 #include "idfilt.h"
+#include <plot.h>
+#include <plotcompat.h>
 
 float xscale, yscale;
 
