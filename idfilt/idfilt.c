@@ -1,6 +1,8 @@
 #ifndef lint
 static char *sccsid = "idfilt.c	(CWI)	1.1	85/03/01";
 #endif
+#include <stdlib.h>
+#include <string.h>
 #include "idfilt.h"
 
 FILE *infile;
@@ -21,9 +23,10 @@ boolean veryfirst = TRUE;
 
 boolean wantquality = FALSE;
 
-main (argc, argv)
-int argc;
-char *argv[];
+void interpret(FILE *);
+
+int
+main (int argc, char * argv[])
 {
 	while (argc > 1 && argv[1][0] == '-') {
 		switch (argv[1][1]) {
@@ -56,6 +59,7 @@ char *argv[];
 	exit (0);
 }
 
+void
 interpret (infile)
 register FILE *infile;
 {
