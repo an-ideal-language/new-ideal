@@ -32,7 +32,7 @@ extern boolean dbg;
 #define bug_off	dbg = FALSE
 #define dprintf	if (dbg) fprintf(stderr,
 
-extern char *filename;
+extern const char *filename;
 extern int lineno;
 #define	LIBFIL	1
 #define	SILENT	2
@@ -357,3 +357,7 @@ extern void opqseg();
 /* lexical analyzer routines */
 extern void filepush ();
 extern void filepop ();
+
+/* routines in ideal.c */
+
+extern void idinclude (const char *, int);
