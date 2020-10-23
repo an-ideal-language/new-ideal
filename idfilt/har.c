@@ -2,6 +2,8 @@
 static char *sccsid = "har.c	(CWI)	1.1	85/03/01";
 #endif
 
+
+#include <string.h>
 #include "idfilt.h"
 
 #define	RESOLUTION	1445.0
