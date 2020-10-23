@@ -29,7 +29,7 @@ boolean just_popped = FALSE;
 void filepush ();
 void filepop ();
 void unput ();
-extern void idinclude(const char *, int);
+
 extern void interpret(void);
 %}
 %Start	PROGRAM COMMENT OUTSIDE LIBRARY INCLUDE
