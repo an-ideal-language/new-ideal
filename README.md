@@ -55,5 +55,4 @@ The files downloaded are:
   util.c      1987-04-29 09:24    6.9k
 ```
 
-The code as downloaded is tagged original-code.  Some of these files are corruped; in particular `action.c`
-is seems to be discontinuous around line n, and it ends with a copy of the man-page source.
+The code as downloaded is tagged original-code.
