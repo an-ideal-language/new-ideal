@@ -1,7 +1,7 @@
 # new-ideal
 
 A second implementation of the ideal constraint-based picture description
-language.
+language.  The relation between this code and the code in the earlier implementation (`ideal`) is unknown.
 
 The original code was copied from
 [freaknet.org/martin/tape/stuff/ditroff/newideal](http://freaknet.org/martin/tape/stuff/ditroff/newideal/) .
@@ -55,4 +55,5 @@ The files downloaded are:
   util.c      1987-04-29 09:24    6.9k
 ```
 
-The code as downloaded is tagged original-code.
+The code as downloaded is tagged original-code.  Some of these files are corruped; in particular `action.c`
+is seems to be discontinuous around line n, and it ends with a copy of the man-page source.
